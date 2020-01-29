@@ -26,7 +26,7 @@ def nb(pizzas, nbparts):
     res = 0
     for i in range(n):
         for y in range(i):
-            if res + pizzas[n - i - y] < nbparts:
+            if res + pizzas[n - i - y] <= nbparts:
                 res += pizzas[n - i - y]
         if res > max:
             max = res
