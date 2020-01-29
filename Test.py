@@ -30,6 +30,8 @@ def nb(pizzas, nbparts):
                 res += pizzas[n - i - y]
         if res > max:
             max = res
+        if max == nbparts:
+            return max
     return max
 
 
