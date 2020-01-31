@@ -27,7 +27,8 @@ def putain(mxx, pizzas, txt = True):
   C_values = []
   C_index = []
 
-  pizzas.reverse()
+  pizzas.reverse() ## Reverse pour itérer de la pizza comportant la plus de part à celle qui en comporte le moins
+
   if txt: print("list", pizzas)
 
   prim_inx = 0
@@ -38,7 +39,7 @@ def putain(mxx, pizzas, txt = True):
   while not done:
     iters += 1
 
-    for i in range(prim_inx, len(pizzas)):
+    for i in range(prim_inx, len(pizzas)): # Boucle de base, ajout de pizzas tant que c'est possible
       if C_sum + pizzas[i] <= mxx:
         C_values += [pizzas[i]]
         C_sum += pizzas[i]
@@ -46,26 +47,21 @@ def putain(mxx, pizzas, txt = True):
       if C_sum == mxx:
         break
     
-    if C_sum > S_sum:
+    if C_sum > S_sum: # Actualisation de la meilleure solution
       S_sum = C_sum
       S_values = dcp(C_values)
       S_index = dcp(C_index)
     
-    if S_sum == mxx:
+    if S_sum == mxx: # Sortir si la solution optimale a été trouvée.
       done = True
       break
-
-    if iters == -1:
-      done = True
-
-
 
     if txt: print("Alafaim",C_values, "sum", S_sum)
 
     done2 = False
     iter2 = 0
 
-    while not done2:
+    while not done2: # Enlever la dernière pizza de la solution, recommencer à l'indice d'après en conservant le reste de la solution
       iter2 +=1
       tempv = C_values[-1]
       C_values = C_values[:-1]
@@ -74,10 +70,10 @@ def putain(mxx, pizzas, txt = True):
       C_sum -= tempv
       prim_inx = tempi+1
       
-      if prim_inx < len(pizzas):
+      if prim_inx < len(pizzas): # Si le nouvel indice est conforme, parfait. S'il sort de la liste, on refait un tour pour checker l'indice suivant
         done2 = True
       else:
-        if len(C_values) == 0:
+        if len(C_values) == 0: #On a testé tout ce qu'on pouvait
           done=True
           break
       #if C_values == []:
