@@ -19,3 +19,7 @@
    - Compliqué d'améliorer la solution vu qu'il faudrait échanger des termes de fin de file (donc gros car la liste est triée) et échanger avec beaucoup de petits
 7. Une solution pour tout:
    - En {n²}, on part de la fin de la liste triée et on remplit comme on peut, puis on réitère en enlevant le dernier terme.
+8. Une solution pour tout, améliorée:
+   - On remplit comme on peut, comme la solution précédente, puis on recommence en enlevant juste le dernier terme de la dernière solution trouvée, en conservant le reste de la solution intact. Ca ressemble à du factoriel, mais sur les listes de Google, le total du temps est en dessous de la seconde.
+   - On pourrait améliorer cette solution sans se baser sur la chance, en switchant de programme au bout de n itérations. On compare alors la meilleure solution de cet algorithme avec celle de (7).
+   - On peut également calculer la solution en n², puis lancer l'algorithme 8 et s'arreter dès qu'on a une meilleure solution.
