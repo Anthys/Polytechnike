@@ -1,7 +1,11 @@
 from slide1 import *
 
 def retourner_fichier(liste):
-  print(1)
+  txt = ""
+  txt += str(len(liste))
+  for i in liste:
+    txt += i["indice"]
+  return txt
 
 def compter_nombre_points(liste):
   total = 0
