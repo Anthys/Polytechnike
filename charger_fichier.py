@@ -4,6 +4,7 @@ c = "c_memorable_moments.txt"
 d = "d_pet_pictures.txt"
 e = "e_shiny_selfies.txt"
 
+# super
 
 def load(adr):
     f = open(adr, "r")
