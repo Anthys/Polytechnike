@@ -33,5 +33,10 @@ def liste_verticale(photos):
             res.append(d)
     return res
 
+
+def trier_verticale(liste):
+    liste.sort(key=lambda x:x["nb_arg"])
+    return liste
+
 p = load(a)
 print(liste_verticale(p))
