@@ -9,22 +9,28 @@ from slide1 import *
 def regroupe_V(liste):
     '''Regroupe les éléments V sous forme de TUPLES auxquels on a modifié les arguments'''
     new_liste = []
-    for indice in range(len(liste)):
-        if indice < len(liste) - 5:
-            max = 0
-            for i in range(1, 6):
-                a = min(difference(liste[indice], liste[indice + i]), difference(liste[indice + i], liste[indice]),
-                        inter(liste[indice], liste[indice + i]))
-                if a > max:
-                    max = a
-        else:
-            i_max = len(liste) - indice
-            max = 0
-            for i in range(1, i_max):
-                a = min(difference(liste[indice], liste[indice + i]), difference(liste[indice + i], liste[indice]),
-                        inter(liste[indice], liste[indice + i]))
-                if a > max:
-                    max = a
+    while len(liste) != 0:
+        if len(liste) == 1:
+            indice_1 = liste[0]
+            maximum = 0
+            indice_2 = 0
+            for i in range(1, min(6, len(liste))):
+                a = min(difference(liste[indice_1]['arg'], liste[indice_1 + i]['arg']),
+                        difference(liste[indice_1 + i]['arg'], liste[indice_1]['arg']),
+                        inter(liste[indice_1]['arg'], liste[indice_1 + i]['arg']))
+                if a >= maximum:
+                    maximum = a
+                    indice_2 = i
+            new_liste += [{'indice': (liste[indice_1]['indice'], liste[indice_2]['indice']),
+                           'nb_arg': liste[indice_1]['nb_arg'] + liste[indice_2]['nb_arg'],
+                           'arg': union(liste[indice_1]['arg'], liste[indice_2]['arg'])}]
+            del liste[indice_1]
+            del liste[indice_2]
+        else :
+            new_liste += [{'indice': liste[0]['indice'], 'arg': liste[0]['arg'], 'nb_arg': liste[0]['nb_arg']}]
+    return new_liste
 
 
 a = load("qualification_round_2019.in/e_shiny_selfies.txt")
+V = trier_verticale(liste_verticale(a))
+print(V)
