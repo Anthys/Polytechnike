@@ -33,7 +33,8 @@ def regroupe_V(liste):
             del liste[0]
     return new_liste
 
-import os 
+import os ,sys
+"""
 for i in os.listdir():
     total = 0
     if i[-4:] == ".txt":
@@ -50,3 +51,5 @@ for i in os.listdir():
         print(" nb points : ", res)
         total += res
 print("Total :", total)
+
+"""

@@ -8,6 +8,7 @@ from charger_fichier import *
 
 def tri_images(liste):
     liste.sort(key=lambda x: x["nb_arg"], reverse=True)
+    return liste
 
 
 def ajoute_image(liste, new_im):
@@ -36,7 +37,7 @@ def ajoute_image(liste, new_im):
 
 def final(photos):
     diapo = []
-    tri_images(photos)
+    photos = tri_images(photos)
     diapo.append(photos[0])
     del photos[0]
 
