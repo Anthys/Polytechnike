@@ -26,11 +26,14 @@ def regroupe_V(liste):
                            'arg': union(liste[indice_1]['arg'], liste[indice_2]['arg'])}]
             del liste[indice_1]
             del liste[indice_2]
-        else :
+        else:
             new_liste += [{'indice': liste[0]['indice'], 'arg': liste[0]['arg'], 'nb_arg': liste[0]['nb_arg']}]
+            del liste[0]
     return new_liste
 
 
-a = load("qualification_round_2019.in/e_shiny_selfies.txt")
+a = load("e_shiny_selfies.txt")
 V = trier_verticale(liste_verticale(a))
+M = regroupe_V(V)
 print(V)
+print(M)
