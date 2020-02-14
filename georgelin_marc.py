@@ -18,11 +18,14 @@ def ajoute_image(liste, new_im):
     Ig = len(sl.inter(argg, new_arg))
     Id = len(sl.inter(argd, new_arg))
 
-    Dg = len(sl.difference(argg, new_arg))
-    Dd = len(sl.difference(argd, new_arg))
+    Dg1 = len(sl.difference(argg, new_arg))
+    Dg2 = len(sl.difference(new_arg, argg))
 
-    resg = min(Ig, Dg)
-    resd = min(Id, Dd)
+    Dd1 = len(sl.difference(argd, new_arg))
+    Dd2 = len(sl.difference(new_arg, argg))
+
+    resg = min(Ig, Dg1, Dg2)
+    resd = min(Id, Dd1, Dd2)
 
     if resg < resd:
         liste.append(new_im)
@@ -44,6 +47,3 @@ def final(photos):
 
     return diapo, res
 
-
-ph = load(b)
-print(final(ph))
