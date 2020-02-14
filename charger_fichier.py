@@ -4,7 +4,6 @@ c = "c_memorable_moments.txt"
 d = "d_pet_pictures.txt"
 e = "e_shiny_selfies.txt"
 
-# super cool
 
 def load(adr):
     f = open(adr, "r")
@@ -36,8 +35,5 @@ def liste_verticale(photos):
 
 
 def trier_verticale(liste):
-    liste.sort(key=lambda x:x["nb_arg"])
+    liste.sort(key=lambda x: x["nb_arg"])
     return liste
-
-p = load(a)
-print(liste_verticale(p))

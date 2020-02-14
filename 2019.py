@@ -1,8 +1,3 @@
-__author__ = 'julesmichaud'
-__filename__ = '2019.py'
-__date__ = '14/02/20'
-
-
 def load(adr):
     f = open(adr, "r")
     txt = [line.split() for line in f]
@@ -34,15 +29,15 @@ def dif_args(list_photo):
     return len(args)
 
 
-def union(a,b):
+def union(a, b):
     return a.union(b)
 
 
-def inter(a,b):
+def inter(a, b):
     return a.intersection(b)
 
 
-def difference(a,b):
+def difference(a, b):
     return a.difference(b)
 
 
@@ -52,14 +47,14 @@ def regroupe_V(liste):
         if indice < len(liste) - 5:
             max = 0
             for i in range(1, 6):
-                a = min(difference(liste[indice], liste[indice+i]), difference(liste[indice+i], liste[indice]), inter(liste[indice], liste[indice+i]))
+                a = min(difference(liste[indice], liste[indice + i]), difference(liste[indice + i], liste[indice]),
+                        inter(liste[indice], liste[indice + i]))
                 if a > max:
                     max = a
-        else :
+        else:
             i_max = len(liste) - indice
             max = 0
             for i in range(1, i_max):
-
 
 
 a = load("qualification_round_2019.in/e_shiny_selfies.txt")

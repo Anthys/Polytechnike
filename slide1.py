@@ -1,23 +1,21 @@
 def dif_args(list_photo):
-  args = []
-  for i in list_photo:
-    for j in i["args"]:
-      if not j in args:
-        args += [j]
-  
-  return len(args)
+    args = []
+    for i in list_photo:
+        for j in i["args"]:
+            if not j in args:
+                args += [j]
+
+    return len(args)
 
 
-def union(a,b):
-  return a.union(b)
+def union(a, b):
+    return a.union(b)
 
-def inter(a,b):
-  return a.intersection(b)
 
-def difference(a,b):
-  return a.difference(b)
+def inter(a, b):
+    return a.intersection(b)
 
-a = set(["1", "2", "3"])
-b = set(["2", "3","4"])
 
-print(difference(a,b))
+def difference(a, b):
+    return a.difference(b)
+
