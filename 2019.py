@@ -2,7 +2,6 @@ __author__ = 'julesmichaud'
 __filename__ = '2019.py'
 __date__ = '14/02/20'
 
-# coucou
 
 def load(adr):
     f = open(adr, "r")
