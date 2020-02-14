@@ -14,8 +14,8 @@ def compter_nombre_points(liste):
     for i, v in enumerate(liste):
         if i < len(liste) - 1:
             a_arg = v["arg"]
-            b_arg = v["arg"]
-            union1 = union(a_arg, b_arg)
+            b_arg = liste[i+1]["arg"]
+            union1 = inter(a_arg, b_arg)
             diff1 = difference(a_arg, b_arg)
             diff2 = difference(b_arg, a_arg)
             total += min(len(union1), len(diff1), len(diff2))
