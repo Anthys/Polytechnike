@@ -20,44 +20,38 @@ def remove_multiple_occurrencies(listoflibraries, books_score):
         # print(" ",str(Dict))
         j += 1
     return listoflibraries
-<<<<<<< HEAD
 '''
-=======
 
-"""
->>>>>>> 05d0ddbf73e5ddc2b2319769cf6f52a03a02e1cc
+
 L = [[1, 2, 4], [0, 4, 2]] #, [0, 0, 0, 0, 0], [1, 3, 4]]
 H = []
 for i in L:
     H += [{"books_ind":i}]
 print(remove_multiple_occurrencies(H, [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
-<<<<<<< HEAD
 '''
 
 def remove_occurrencies_from_K(listoflibraries, books_score, K):
     Dict = dict()
-    for i in listoflibraries[K]["books_ind"]:
+    for i in range(len(books_score)):#listoflibraries[K]["books_ind"]:
         Dict[i] = False
     for library in listoflibraries[K:]:
         i = 0
         while i < len(library["books_ind"]):
             book_ind = library["books_ind"][i]
-            print(" ", str(library))
-            if book_ind in list(Dict.keys()) and Dict[book_ind]:
+            #print(" ", str(library))
+            if Dict[book_ind]:
                 del library["books_ind"][i]
             else:
                 i += 1
             Dict[book_ind] = True
     return listoflibraries
 
-L = [[1, 2, 4], [0, 4, 2], [0, 0, 0, 0, 0], [1, 3, 4]]
+"""L = [[1, 2, 4], [0, 4, 2], [0, 0, 0, 0, 0], [1, 3, 4]]
 H = []
 for i in L:
     H += [{"books_ind":i}]
 print(remove_occurrencies_from_K(H, [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 1))
-=======
 """
->>>>>>> 05d0ddbf73e5ddc2b2319769cf6f52a03a02e1cc
 
 '''
 a = "a_example.txt"
