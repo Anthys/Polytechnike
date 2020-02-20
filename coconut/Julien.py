@@ -10,10 +10,11 @@ def print_output_file(liste_finale, values):
     txt += str(len(library['books_ind']))
     txt += "\n"
     for book_ind in library['books_ind']:
-      txt += str(values[book_ind]) + " "
+      txt += str(book_ind) + " "
     txt += "\n"
   print(txt)
 
-def input_bis(file):
-  a = open(file)
-  return
+def tri_3(liste, values):
+    liste.sort(key=lambda x: values[x], reverse=False)
+    liste.reverse()
+    return liste
