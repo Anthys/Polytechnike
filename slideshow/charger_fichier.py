@@ -28,13 +28,10 @@ def load(adr):
 
 def liste_verticale(photos):
     res = []
-    H = []
     for d in photos:
         if d["typ"] == "V":
             res.append(d)
-        else:
-            H.append(d)
-    return res, H
+    return res
 
 
 def trier_verticale(liste):
