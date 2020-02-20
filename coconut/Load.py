@@ -22,6 +22,6 @@ def load(fichier):
         D["books_ind"] = []
         for x in books_ind:
             D["books_ind"].append(int(x))
-        D["var_ind"] = i
+        D["ind"] = i
         Library.append(D)
-    return Library
+    return books_score, Library
