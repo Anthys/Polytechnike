@@ -3,7 +3,7 @@ __file__ = "Load.py"
 __date__ = "20/02/2020"
 
 a = open("a_example.txt", "r")
-
+b = open("b_read_on.txt")
 
 def load(fichier):
     txt = [line.split() for line in fichier]
@@ -23,5 +23,8 @@ def load(fichier):
         for x in books_ind:
             D["books_ind"].append(int(x))
         D["ind"] = i
+        D["sum_score"] = 0
+        for ind in D["books_ind"]:
+            D["sum_score"] += books_score[ind]
         Library.append(D)
     return books_score, Library
