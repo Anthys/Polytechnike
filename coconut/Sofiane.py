@@ -4,14 +4,24 @@ def remove_multiple_occurrencies(listoflibraries, books_score):
     Dict = dict()
     for i in range(len(books_score)):
         Dict[i] = False
+    j = 0
     for library in listoflibraries:
-        for element in library["books_ind"]:
-            if Dict[element]:
-                library["books_ind"].remove(element)
-            Dict[element] = True
+        
+        # print(j)
+        i = 0
+        while i < len(library["books_ind"]):
+            book_ind = library["books_ind"][i]
+            print(" ", str(library))
+            if Dict[book_ind]:
+                del library["books_ind"][i]
+            else:
+                i += 1
+            Dict[book_ind] = True
+        # print(" ",str(Dict))
+        j += 1
     return listoflibraries
 
-L = [[1, 2, 4], [0, 2, 4]] #, [0, 0, 0, 0, 0], [1, 3, 4]]
+L = [[1, 2, 4], [0, 4, 2]] #, [0, 0, 0, 0, 0], [1, 3, 4]]
 H = []
 for i in L:
     H += [{"books_ind":i}]
