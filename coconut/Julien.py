@@ -1,4 +1,4 @@
-import Load.py
+import Load
 
 
 def print_output_file(liste_finale, values):
@@ -13,3 +13,7 @@ def print_output_file(liste_finale, values):
       txt += str(values[book_ind]) + " "
     txt += "\n"
   print(txt)
+
+def input_bis(file):
+  a = open(file)
+  return
