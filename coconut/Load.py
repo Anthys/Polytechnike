@@ -3,7 +3,7 @@ __file__ = "Load.py"
 __date__ = "20/02/2020"
 
 a = open("a_example.txt", "r")
-b = open("b_read_on.txt")
+b = open("b_read_on.txt", "r")
 
 def load(fichier):
     txt = [line.split() for line in fichier]
