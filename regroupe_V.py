@@ -34,16 +34,17 @@ def regroupe_V(liste):
     return new_liste
 
 
-a = load("a_example.txt")
-print("COUCOU")
+a = load("b_lovely_landscapes.txt")
+print(dif_args(a))
+#print("COUCOU")
 V, H = liste_verticale(a)
-print(V)
+# print(V)
 V = trier_verticale(V)
 M = regroupe_V(V)
-print(M)
-print("---")
+# print(M)
+# print("---")
 photo = H+M
-print(photo)
+# print(photo)
 photo, res= final(photo)
-print(photo,res)
+# print(photo,res)
 print(compter_nombre_points(photo))

@@ -1,7 +1,7 @@
 def dif_args(list_photo):
     args = []
     for i in list_photo:
-        for j in i["args"]:
+        for j in i["arg"]:
             if not j in args:
                 args += [j]
 
