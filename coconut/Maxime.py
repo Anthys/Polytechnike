@@ -32,10 +32,7 @@ def sum_score(library, scores):
     return sum
 
 
-def reorder_libraries(liste, scores):
+def reorder_libraries(liste, scores, tri_func):
     compute_sum_score(liste, scores)
-    for i in range(len(liste) - 1):
-        if liste[i + 1]["sum_score"] > liste[i]["sum_score"]:
-            liste[i + 1], liste[i] = liste[i], liste[i + 1]
+    tri_func(liste)
     return liste
-
