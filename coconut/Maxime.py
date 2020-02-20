@@ -36,3 +36,9 @@ def reorder_libraries(liste, scores, tri_func):
     compute_sum_score(liste, scores)
     tri_func(liste)
     return liste
+
+
+def reorder_libraries_ind(liste, scores, tri_func, ind):
+    compute_sum_score(liste, scores)
+    liste = liste[:ind + 1] + tri_func(liste[ind:])
+    return liste
