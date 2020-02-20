@@ -11,7 +11,7 @@ def remove_multiple_occurrencies(listoflibraries, books_score):
         i = 0
         while i < len(library["books_ind"]):
             book_ind = library["books_ind"][i]
-            print(" ", str(library))
+            #print(" ", str(library))
             if Dict[book_ind]:
                 del library["books_ind"][i]
             else:
@@ -21,12 +21,13 @@ def remove_multiple_occurrencies(listoflibraries, books_score):
         j += 1
     return listoflibraries
 
+"""
 L = [[1, 2, 4], [0, 4, 2]] #, [0, 0, 0, 0, 0], [1, 3, 4]]
 H = []
 for i in L:
     H += [{"books_ind":i}]
 print(remove_multiple_occurrencies(H, [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
-
+"""
 
 """
 #a = "a_example.txt"
