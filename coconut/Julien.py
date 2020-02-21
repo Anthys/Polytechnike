@@ -29,7 +29,8 @@ def compter_points(liste_library, maxdays, books_score):
   day = 0
   points = 0
   for ind_library in range(len(liste_library)):
-    print(ind_library/len(liste_library)*100)
+    #print(ind_library/len(liste_library)*100)
+    print("NEW DAY, ", day, "/", maxdays)
     library = liste_library[ind_library]
     day += library['days_signup']
     if day > maxdays:
@@ -70,3 +71,73 @@ def load(fichier):
             D["sum_score"] += books_score[ind]
         Library.append(D)
     return books_score, Library, nb_days
+
+
+def dicalyse(mes):
+  temp = {"sum":0, "min":float("inf"), "max":-1, "mes":mes, "mean":0}
+  return temp
+
+def fill_dict(dictt, key, val):
+  dictt[key]["sum"] += val
+  if val > dictt[key]['max']:
+    dictt[key]['max'] = val
+  if val < dictt[key]['min']:
+    dictt[key]['min'] = val
+  return dictt
+
+SUPERLISTE = ["a_example.txt", "b_read_on.txt", "c_incunabula.txt", "d_tough_choices.txt","e_so_many_books.txt", "f_libraries_of_the_world.txt"]
+
+def analyse(liste_library, values, name = "", max_days = 0):
+  if name:
+    print('\n')
+    print("###", name, ":", "\n")
+  fulldic = {}
+  keys = ["signup", "books_lib", "points_libs", "books_val"]
+  mes = ["Time to signup", "Number of books per libraries", "Sum_score per libraries", "Values of all books"]
+  for k in range(len(keys)):
+    val =keys[k]
+    message = mes[k]
+    fulldic[val] = dicalyse(message)
+
+  for library in liste_library:
+    fulldic = fill_dict(fulldic, "signup", library["days_signup"])
+    fulldic = fill_dict(fulldic, "books_lib", len(library["books_ind"]))
+    temp_sum = 0
+    for book in library["books_ind"]:
+      #print(book)
+      temp_sum += values[book]
+    fulldic = fill_dict(fulldic, "points_libs", temp_sum)
+  for book in values:
+    fulldic = fill_dict(fulldic, "books_val", book)
+
+  fulldic["signup"]["mean"] = fulldic["signup"]["sum"]/len(liste_library)
+  fulldic["books_lib"]["mean"] = fulldic["books_lib"]["sum"]/len(liste_library)
+  fulldic["points_libs"]["mean"] = fulldic["points_libs"]["sum"]/len(liste_library)
+  fulldic["books_val"]["mean"] = fulldic["books_val"]["sum"]/len(values)
+  if False:
+    for key in keys:
+      cur_dic = fulldic[key]
+      print(" ", cur_dic["mes"])
+      print(" ", " ", "MAXIMUM:", cur_dic["max"])
+      print(" ", " ", "MINIMUM:", cur_dic["min"])
+      print(" ", " ", "MEAN:", cur_dic["mean"])
+  else:
+    print(" ", "Max days : ", max_days)
+    print(" ", "Number of libraries : ", len(liste_library))
+    print(" ", "Number of books : ", len(values))
+    print()
+    print("| | " + str(" | ".join(mes)) + " |")
+    print("| --- | " + str(" | ".join(["---" for i in range(len(mes))])) + " |")
+    maxs = [str(fulldic[key]["max"]) for key in keys]
+    mins = [str(fulldic[key]["min"]) for key in keys]
+    means = [str(fulldic[key]["mean"]) for key in keys]
+    print("| **MAXIMUM** | " + str(" | ".join(maxs)) + " |")
+    print("| **MINIMUM** | " + str(" | ".join(mins)) + " |")
+    print("| **MEAN** | " + str(" | ".join(means)) + " |")
+    if False:
+      for key in keys:
+        cur_dic = fulldic[key]
+        print(" ", cur_dic["mes"])
+        print(" ", " ", "MAXIMUM:", cur_dic["max"])
+        print(" ", " ", "MINIMUM:", cur_dic["min"])
+        print(" ", " ", "MEAN:", cur_dic["mean"])
