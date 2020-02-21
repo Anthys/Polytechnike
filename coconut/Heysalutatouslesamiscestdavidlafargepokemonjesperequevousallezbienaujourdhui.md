@@ -44,11 +44,15 @@ Tri2 > RemoveDoublon > ReorderLibraries > MettreLivresBonOrdre > RemoveLibraries
 ## Analyse des sets
 
 
+
 ### a_example.txt : 
 
-  Max days :  7
-  Number of libraries :  2
-  Number of books :  6
+  Max days :  7 
+
+  Number of libraries :  2 
+
+  Number of books :  6 
+
 
 | | Time to signup | Number of books per libraries | Sum_score per libraries | Values of all books |
 | --- | --- | --- | --- | --- |
@@ -59,9 +63,12 @@ Tri2 > RemoveDoublon > ReorderLibraries > MettreLivresBonOrdre > RemoveLibraries
 
 ### b_read_on.txt : 
 
-  Max days :  1000
-  Number of libraries :  100
-  Number of books :  100000
+  Max days :  1000 
+
+  Number of libraries :  100 
+
+  Number of books :  100000 
+
 
 | | Time to signup | Number of books per libraries | Sum_score per libraries | Values of all books |
 | --- | --- | --- | --- | --- |
@@ -72,9 +79,12 @@ Tri2 > RemoveDoublon > ReorderLibraries > MettreLivresBonOrdre > RemoveLibraries
 
 ### c_incunabula.txt : 
 
-  Max days :  100000
-  Number of libraries :  10000
-  Number of books :  100000
+  Max days :  100000 
+
+  Number of libraries :  10000 
+
+  Number of books :  100000 
+
 
 | | Time to signup | Number of books per libraries | Sum_score per libraries | Values of all books |
 | --- | --- | --- | --- | --- |
@@ -85,9 +95,12 @@ Tri2 > RemoveDoublon > ReorderLibraries > MettreLivresBonOrdre > RemoveLibraries
 
 ### d_tough_choices.txt : 
 
-  Max days :  30001
-  Number of libraries :  30000
-  Number of books :  78600
+  Max days :  30001 
+
+  Number of libraries :  30000 
+
+  Number of books :  78600 
+
 
 | | Time to signup | Number of books per libraries | Sum_score per libraries | Values of all books |
 | --- | --- | --- | --- | --- |
@@ -98,9 +111,12 @@ Tri2 > RemoveDoublon > ReorderLibraries > MettreLivresBonOrdre > RemoveLibraries
 
 ### e_so_many_books.txt : 
 
-  Max days :  200
-  Number of libraries :  1000
-  Number of books :  100000
+  Max days :  200 
+
+  Number of libraries :  1000 
+
+  Number of books :  100000 
+
 
 | | Time to signup | Number of books per libraries | Sum_score per libraries | Values of all books |
 | --- | --- | --- | --- | --- |
@@ -111,9 +127,12 @@ Tri2 > RemoveDoublon > ReorderLibraries > MettreLivresBonOrdre > RemoveLibraries
 
 ### f_libraries_of_the_world.txt : 
 
-  Max days :  700
-  Number of libraries :  1000
-  Number of books :  100000
+  Max days :  700 
+
+  Number of libraries :  1000 
+
+  Number of books :  100000 
+
 
 | | Time to signup | Number of books per libraries | Sum_score per libraries | Values of all books |
 | --- | --- | --- | --- | --- |
