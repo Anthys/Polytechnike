@@ -1,5 +1,3 @@
-import Jules, Julien, Load, Sofiane, Maxime
-
 a = "e_so_many_books.txt"
 
 def tri_days_sign_up(liste):
@@ -27,7 +25,7 @@ def print_output_file(liste_finale, values):
       txt += str(book_ind) + " "
     txt += "\n"
   a = open("super", "w+")
-  a.write(txt)
+  print(txt)
 
 def tri_3(liste, values):
     liste.sort(key=lambda x: values[x], reverse=False)
@@ -95,24 +93,66 @@ def reorder_libraries_ind(liste, scores, tri_func, ind):
     liste = liste[:ind + 1] + tri_func(liste[ind:])
     return liste
 
+def load(fichier):
+    txt = [line.split() for line in fichier]
+    nb_library = int(txt[0][1])
+    nb_days = int(txt[0][2])
+    books_score = []
+    for x in txt[1]:
+        books_score.append(int(x))
+
+    Library = list()
+    for i in range(nb_library):
+        D = dict()
+        D["books_per_day"] = int(txt[2 + 2 * i][2])
+        D["days_signup"] = int(txt[2 + 2 * i][1])
+        books_ind  = txt[3 + 2 * i]
+        D["books_ind"] = []
+        for x in books_ind:
+            D["books_ind"].append(int(x))
+        D["ind"] = i
+        D["sum_score"] = 0
+        for ind in D["books_ind"]:
+            D["sum_score"] += books_score[ind]
+        Library.append(D)
+    return books_score, Library
+
+def remove_multiple_occurrencies(listoflibraries, books_score):
+    Dict = dict()
+    for i in range(len(books_score)):
+        Dict[i] = False
+    j = 0
+    for library in listoflibraries:
+        
+        # print(j)
+        i = 0
+        while i < len(library["books_ind"]):
+            book_ind = library["books_ind"][i]
+            #print(" ", str(library))
+            if Dict[book_ind]:
+                del library["books_ind"][i]
+            else:
+                i += 1
+            Dict[book_ind] = True
+        # print(" ",str(Dict))
+        j += 1
+    return listoflibraries
+
 
 file1 = open(a)
-values, file1 = Load.load(file1)
-list_lib = Jules.tri_1(file1)
-for i in range(1, len(file1)-1):
-    print(i/len(file1)*100)
-    list_lib = Sofiane.remove_occurrencies_from_K(list_lib, values, i-1)
-    list_lib = Maxime.reorder_libraries_ind(list_lib, values, Jules.tri_1, i)
+values, file1 = load(file1)
+letri = tri_nb_livres
+b = letri(file1)
+list_lib = remove_multiple_occurrencies(b, values)
+list_lib = reorder_libraries(list_lib, values, letri)
 b = list_lib
 for library_ind in range(len(b)):
-    temp = b[library_ind]["books_ind"]
-    b[library_ind]["books_ind"] = Julien.tri_3(temp, values)
-    # remet les livre dans un ordre cool
+  temp = b[library_ind]["books_ind"]
+  b[library_ind]["books_ind"] = tri_3(temp, values)
 i = 0
 while i < len(b):
-    # enleve toutes les librairies nules
-    if len(b[i]["books_ind"]) == 0:
-        del b[i]
-    else:
-        i += 1
-Julien.print_output_file(b, values)
+  if len(b[i]["books_ind"]) == 0:
+    del b[i]
+  else:
+    i += 1
+print_output_file(b, values)

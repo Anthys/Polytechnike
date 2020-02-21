@@ -12,9 +12,14 @@ def print_output_file(liste_finale, values):
     for book_ind in library['books_ind']:
       txt += str(book_ind) + " "
     txt += "\n"
-  print(txt)
+  a = open("super", "w+")
+  a.write(txt)
 
 def tri_3(liste, values):
     liste.sort(key=lambda x: values[x], reverse=False)
     liste.reverse()
+    return liste
+
+def tri_nb_livres(liste):
+    liste.sort(key=lambda x: (x["sum_score"] / (x["days_signup"] + x["books_per_day"] + len(x["books_ind"]))), reverse=True)
     return liste
