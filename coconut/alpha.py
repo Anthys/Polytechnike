@@ -1,8 +1,9 @@
 import Jules, Julien, Load
 
-a = "a_example.txt"
+a = "b_read_on.txt"
 
 file1 = open(a)
-values, file1 = Load.load(file1)
+book_scores, file1, maxdays = Julien.load(file1)
 b = Jules.tri_days_sign_up(file1)
-Julien.print_output_file(b, values)
+print(Julien.compter_points(b, maxdays, book_scores))
+#Julien.print_output_file(b, book_scores)
