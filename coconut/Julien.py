@@ -122,9 +122,9 @@ def analyse(liste_library, values, name = "", max_days = 0):
       print(" ", " ", "MINIMUM:", cur_dic["min"])
       print(" ", " ", "MEAN:", cur_dic["mean"])
   else:
-    print(" ", "Max days : ", max_days)
-    print(" ", "Number of libraries : ", len(liste_library))
-    print(" ", "Number of books : ", len(values))
+    print(" ", "Max days : ", max_days, "\n")
+    print(" ", "Number of libraries : ", len(liste_library), "\n")
+    print(" ", "Number of books : ", len(values), "\n")
     print()
     print("| | " + str(" | ".join(mes)) + " |")
     print("| --- | " + str(" | ".join(["---" for i in range(len(mes))])) + " |")
