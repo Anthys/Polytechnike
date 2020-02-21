@@ -27,7 +27,7 @@ On cherche la meilleure diapo à foutre à droite dans les N suivantes. Pour N=1
 
 # HASHCODE 2020 | Google Books
 
-[Résulats précis, analyses complètes, etc...](coconut/Heysalutàtouslesamiscestdavidlafargepokemonjespèrequevousallezbienaujourdhui.md)
+[Résulats précis, analyses complètes, etc...](coconut/Heysalutatouslesamiscestdavidlafargepokemonjesperequevousallezbienaujourdhui.md)
 
 ### Résultat global
 - 103 français
