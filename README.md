@@ -5,7 +5,7 @@
 
 ### Pistes
 
-[Lien vers les pistes.](Pizza/PistePizza.md)
+[Lien vers les pistes.](2020/Pizza/PistePizza.md)
 
 ### Le 29/01
 
@@ -27,7 +27,7 @@ On cherche la meilleure diapo à foutre à droite dans les N suivantes. Pour N=1
 
 # HASHCODE 2020 | Google Books
 
-[Résulats précis, analyses complètes, etc...](coconut/Heysalutatouslesamiscestdavidlafargepokemonjesperequevousallezbienaujourdhui.md)
+[Résulats précis, analyses complètes, etc...](2020/coconut/Heysalutatouslesamiscestdavidlafargepokemonjesperequevousallezbienaujourdhui.md)
 
 ### Résultat global
 - 103 français
@@ -37,3 +37,8 @@ On cherche la meilleure diapo à foutre à droite dans les N suivantes. Pour N=1
 - Prendre un peu de temps pour pondérer les formules décidées: Afin de simplifier la solution, on a décidé d'appliquer une certaine valeur d'efficacité à chaque librairie, calculée avec une certaine fonction mathématique prenant plusieurs paramètres (temps de signup, nombre de points...). On aurait pu pondérer chacun des termes ou les changer un peu pour gagner quelques points.
 - Prendre du temps pour analyser chacun des sets, ça nous permettrait de trouver les failles de nos programmes, les cas limites, etc.
 - Faire directement une fonction de calcul des points, ce qui nous permettrait de faire des itérations pour trouver les meilleures.
+
+# HashCode 2021 Practice round
+
+731 000 000 points, on a pas trouvé mieux sur internet, donc top 1 monde par défaut.
+On a gagné les derniers points en faisant jouer des coefficients sur notre fonction principale qui choisit la pizza la plus adaptée.
