@@ -2,11 +2,11 @@
 
 [HashCode 2020](#HashCode-2020)
 
-​	[HashCode 2020 contest](##HASHCODE-2020-|-Google-Books)
+​	[HashCode 2020 contest](hashcode-2020--google-books)
 
 [HashCode 2021](#Hashcode-2021)
 
-​	[HashCode 2021 contest](##HASHCODE-2021---Traffic-lights)
+​	[HashCode 2021 contest](#hashcode-2021---traffic-lights)
 
 # HashCode 2020
 
