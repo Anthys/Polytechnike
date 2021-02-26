@@ -1,0 +1,33 @@
+def coucou():
+  pass
+
+feux_output = [ 
+  [["duree":1, "street_index":0], ["duree":1, "street_index":1]], #Intersection 1
+  [["duree":1, "street_index":0], ["duree":1, "street_index":1]] #Intersection 2
+]
+
+trajets_voitures = [
+	["nom1", "nom2"] #voiture 1
+]
+
+MatIntersections = [
+  [-1, 1], # Indices dans la liste streets de la route qui relie i
+  [2,-1] # -1 signifie qu'il n'y a pas de routes
+]
+
+nom_index_streets = {
+  "nom1":0,
+  "nom2":1,
+}
+
+streets = [
+	{"nom":"nom1", "taille":2, "istart":2, "iend":4}, 
+	{"nom":"nom1", "taille":2, "istart":3, "iend":4}, 
+  # nom de la rue
+  # taille de la rue
+  # indice de l'intersection de début
+  # indice de l'intersection de fin
+]
+  
+def index_route_from_to(from_, to_):
+  return MatIntersections[from_][to_]

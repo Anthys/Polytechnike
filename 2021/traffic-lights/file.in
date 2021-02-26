@@ -1,0 +1,15 @@
+['rue-de-londres', 'rue-d-amsterdam', 'rue-de-moscou', 'rue-de-rome']
+['rue-d-athenes', 'rue-de-moscou', 'rue-de-londres']
+##
+[-1, 1, -1, -1]
+[-1, -1, 4, -1]
+[0, -1, -1, 3]
+[-1, 2, -1, -1]
+##
+{'istart': 2, 'nom': 'rue-de-londres', 'taille': 1, 'iend': 0}
+{'istart': 0, 'nom': 'rue-d-amsterdam', 'taille': 1, 'iend': 1}
+{'istart': 3, 'nom': 'rue-d-athenes', 'taille': 1, 'iend': 1}
+{'istart': 2, 'nom': 'rue-de-rome', 'taille': 2, 'iend': 3}
+{'istart': 1, 'nom': 'rue-de-moscou', 'taille': 3, 'iend': 2}
+##
+{'points_by_car': 1000, 'n_cars': 2, 'n_intersect': 4, 'n_feux': 0, 'n_streets': 5, 'simulation_duree': 6}
