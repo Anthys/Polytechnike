@@ -2,6 +2,12 @@
 
 [HashCode 2020](#HashCode 2020)
 
+​	[HashCode 2020 contest](##HASHCODE 2020 | Google Books)
+
+[HashCode 2021](#Hashcode 2021)
+
+​	[HashCode 2021 contest](#HashCode 2021)
+
 # HashCode 2020
 
 ## Practice
@@ -45,7 +51,11 @@ On cherche la meilleure diapo à foutre à droite dans les N suivantes. Pour N=1
 
 # HashCode 2021 
 
-### Practice round
+## Practice round
 
 731 000 000 points, on a pas trouvé mieux sur internet, donc top 1 monde par défaut.
 On a gagné les derniers points en faisant jouer des coefficients sur notre fonction principale qui choisit la pizza la plus adaptée.
+
+## HASHCODE 2021 - Traffic lights
+
+[Link](2021/traffic-lights/traffic-lights.md)
